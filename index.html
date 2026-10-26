@@ -516,7 +516,7 @@ footer .foot-card{
   <section id="flights">
     <div class="sec-head">
       <h2><span class="dot blue"></span>航班 <span style="font-size:15px">7 段</span></h2>
-      <p>時間都是當地時間。座位有寫出來的就是已選好的。</p>
+      <p>時間都是當地時間。</p>
     </div>
 
     <article class="card">
@@ -526,7 +526,7 @@ footer .foot-card{
       </div>
       <p class="route-line">西雅圖 SEA → 阿姆斯特丹 AMS</p>
       <p class="times">出發 14:35（西岸時間）・隔天 09:25 抵達</p>
-      <p>特選經濟艙 Premium Select・空中巴士 A330-900neo<br><span class="seat">座位 20A / 20B</span></p>
+      <p>特選經濟艙 Premium Select・空中巴士 A330-900neo</p>
     </article>
 
     <article class="card">
@@ -536,7 +536,7 @@ footer .foot-card{
       </div>
       <p class="route-line">阿姆斯特丹 AMS → 布達佩斯 BUD</p>
       <p class="times">出發 11:35 ・抵達 13:40（第二航廈）</p>
-      <p>KLM Cityhopper<br><span class="seat">座位 16D / 16F</span></p>
+      <p>KLM Cityhopper</p>
       <div class="note-box warn">⚠ 全程最緊的一段：阿姆斯特丹轉機只有 2 小時 10 分，又是第一次申根入境（EES 指紋＋拍照），下飛機直奔護照查驗，別先逛免稅店。</div>
     </article>
 
@@ -547,7 +547,7 @@ footer .foot-card{
       </div>
       <p class="route-line">布達佩斯 BUD → 布拉格 PRG</p>
       <p class="times">出發 12:20 ・抵達 13:35</p>
-      <p>Plus 票價・每人 20 公斤托運行李・Gary 有 Priority＋2 件手提行李<br><span class="seat">Venia 座位 14E・Gary 座位 14F</span></p>
+      <p>Plus 票價・每人 20 公斤托運行李・Gary 有 Priority＋2 件手提行李</p>
       <div class="note-box">登機證只在 App 裡：線上報到已完成，用 Ryanair App 的 QR code 登機，不收紙本。早上很趕——飯店表定 12:00 退房，班機 12:20 起飛，10:00–10:30 就要離開飯店。</div>
     </article>
 
@@ -558,7 +558,7 @@ footer .foot-card{
       </div>
       <p class="route-line">維也納 VIE → 東京羽田 HND</p>
       <p class="times">出發 10:35 ・隔天 06:55 抵達</p>
-      <p>波音 787-8・直飛・座位已選</p>
+      <p>波音 787-8・直飛</p>
     </article>
 
     <article class="card">
@@ -568,7 +568,7 @@ footer .foot-card{
       </div>
       <p class="route-line">東京羽田 HND → 台北松山 TSA</p>
       <p class="times">出發 12:15 ・抵達 15:05</p>
-      <p>座位已選</p>
+
     </article>
 
     <article class="card">
@@ -578,7 +578,7 @@ footer .foot-card{
       </div>
       <p class="route-line">高雄 KHH → 香港 HKG</p>
       <p class="times">出發 07:50 ・抵達 09:30（第一航廈）</p>
-      <p>座位已選</p>
+
     </article>
 
     <article class="card">
@@ -588,7 +588,7 @@ footer .foot-card{
       </div>
       <p class="route-line">香港 HKG → 西雅圖 SEA</p>
       <p class="times">出發 13:00 ・當天 09:55 抵達</p>
-      <p><span class="seat">座位 15K / 16K</span></p>
+
     </article>
 
     <!-- ===== trains ===== -->
@@ -766,12 +766,12 @@ footer .foot-card{
 /* tag: plane | train | shinkansen | metro | walk | bus | note  (note = no pill) */
 const DAYS = [
 {date:"2026-11-26",dow:"週四",label:"11/26",city:"西雅圖 → 阿姆斯特丹",seg:"出發",pic:"s-plane",stay:"機上過夜",events:[
- {t:"14:35",tag:"plane",text:"達美航空 DL 142，西雅圖 SEA 出發 — 特選經濟艙，座位 20A / 20B"},
+ {t:"14:35",tag:"plane",text:"達美航空 DL 142，西雅圖 SEA 出發 — 特選經濟艙"},
  {t:"",tag:"note",text:"夜間航班，機上過夜，明天早上到阿姆斯特丹。"}
 ]},
 {date:"2026-11-27",dow:"週五",label:"11/27",city:"阿姆斯特丹 → 布達佩斯",seg:"中歐",pic:"s-budapest",stay:"Matild Palace，布達佩斯",events:[
  {t:"09:25",tag:"plane",text:"抵達阿姆斯特丹 AMS — 首次申根入境，EES 指紋＋拍照",must:true},
- {t:"11:35",tag:"plane",text:"荷蘭航空 KL 1367，AMS 11:35 → 布達佩斯 13:40（第二航廈），座位 16D / 16F"},
+ {t:"11:35",tag:"plane",text:"荷蘭航空 KL 1367，AMS 11:35 → 布達佩斯 13:40（第二航廈）"},
  {t:"",tag:"note",text:"轉機只有 2 小時 10 分，下飛機直奔護照查驗，別先逛免稅店。"},
  {t:"15:00",tag:"note",text:"入住 Matild Palace，布達佩斯。"},
  {t:"晚上",tag:"note",text:"聖母升天大教堂聖誕市集（Basilica），先去這裡。",must:true}
@@ -783,7 +783,7 @@ const DAYS = [
 ]},
 {date:"2026-11-29",dow:"週日",label:"11/29",city:"布達佩斯 → 布拉格",seg:"中歐",pic:"s-prague",stay:"The Botanist，布拉格（第 1 晚）",events:[
  {t:"10:00",tag:"note",text:"最晚 10:00–10:30 離開飯店（班機 12:20，飯店表定 12:00 退房，時間很緊）。"},
- {t:"12:20",tag:"plane",text:"瑞安航空 FR 4091，布達佩斯 12:20 → 布拉格 13:35，座位 14E / 14F，Plus 票價，每人 20 公斤托運行李"},
+ {t:"12:20",tag:"plane",text:"瑞安航空 FR 4091，布達佩斯 12:20 → 布拉格 13:35，Plus 票價，每人 20 公斤托運行李"},
  {t:"",tag:"note",text:"登機證只在 App 裡：線上報到已完成，用 Ryanair App 的 QR code 登機。"},
  {t:"15:00",tag:"note",text:"入住 The Botanist，布拉格老城，Deluxe King 房。"},
  {t:"晚上",tag:"note",text:"老城廣場 → 瓦茨拉夫廣場聖誕市集",must:true}
@@ -806,7 +806,7 @@ const DAYS = [
  {t:"晚上",tag:"note",text:"美景宮前聖誕市集，當天順路加碼。"}
 ]},
 {date:"2026-12-04",dow:"週五",label:"12/4",city:"維也納 → 東京",seg:"日本",pic:"s-plane",stay:"機上過夜",events:[
- {t:"10:35",tag:"plane",text:"全日空 NH 206，維也納 10:35 直飛羽田，隔天 06:55 抵達（座位已選）"}
+ {t:"10:35",tag:"plane",text:"全日空 NH 206，維也納 10:35 直飛羽田，隔天 06:55 抵達"}
 ]},
 {date:"2026-12-05",dow:"週六",label:"12/5",city:"東京",seg:"日本",pic:"s-cup",stay:"OMO5 Tokyo Otsuka（第 1 晚）",events:[
  {t:"06:55",tag:"plane",text:"抵達東京羽田"},
@@ -844,7 +844,7 @@ const DAYS = [
 ]},
 {date:"2026-12-09",dow:"週三",label:"12/9",city:"東京 → 台北",seg:"日本",pic:"s-taipei101",stay:"Regent Taipei，台北（第 1 晚）",events:[
  {t:"09:45",tag:"note",text:"早上輕鬆收拾，約 09:45 離開大塚去羽田。"},
- {t:"12:15",tag:"plane",text:"長榮航空 BR 191，羽田 12:15 → 台北松山 15:05（座位已選）"},
+ {t:"12:15",tag:"plane",text:"長榮航空 BR 191，羽田 12:15 → 台北松山 15:05"},
  {t:"15:05",tag:"note",text:"入住台北晶華酒店 Regent Taipei（兩晚訂房已連成一住，優先同一間房）。"}
 ]},
 {date:"2026-12-10",dow:"週四",label:"12/10",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Regent Taipei，台北（第 2 晚）",events:[
@@ -894,7 +894,7 @@ const DAYS = [
  {t:"白天",tag:"note",text:"爸媽家最後一晚，明天一早飛高雄。"}
 ]},
 {date:"2026-12-24",dow:"週四",label:"12/24",city:"高雄 → 香港",seg:"香港",pic:"s-hk",stay:"香港家人家",events:[
- {t:"07:50",tag:"plane",text:"華信航空 AE 983，高雄 07:50 → 香港 09:30（第一航廈，座位已選）"},
+ {t:"07:50",tag:"plane",text:"華信航空 AE 983，高雄 07:50 → 香港 09:30（第一航廈）"},
  {t:"",tag:"note",text:"之後住香港家人家 — 不用訂房（Grand Hyatt 從 12/27 開始）。"}
 ]},
 {date:"2026-12-25",dow:"週五",label:"12/25",city:"香港・家人家",seg:"香港",pic:"s-hk",stay:"香港家人家",events:[
@@ -912,7 +912,7 @@ const DAYS = [
 ]},
 {date:"2026-12-29",dow:"週二",label:"12/29",city:"香港 → 西雅圖",seg:"回家",pic:"s-plane",stay:"回家囉！",events:[
  {t:"",tag:"note",text:"Grand Hyatt 退房。"},
- {t:"13:00",tag:"plane",text:"國泰航空 CX 852，香港 13:00 → 西雅圖當天 09:55，座位 15K / 16K"}
+ {t:"13:00",tag:"plane",text:"國泰航空 CX 852，香港 13:00 → 西雅圖當天 09:55"}
 ]}
 ];
 
