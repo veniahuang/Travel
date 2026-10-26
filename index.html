@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東歐・東京・台北 — 2026 冬之旅</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFCF6;
+  --ink:#3E3A39;
+  --coral:#F2A497;
+  --yellow:#F6D27A;
+  --blue:#A8D3E6;
+  --green:#B9DAA5;
+  --white:#FFFFFF;
+  --soft:#F7F0E3;
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans TC",sans-serif;
+  font-size:16px;
+  line-height:1.7;
+}
+h1,h2,h3,.display{font-family:"Zen Maru Gothic","Noto Sans TC",sans-serif}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+section{scroll-margin-top:84px}
+
+/* ---------- fixed top menu ---------- */
+.topnav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:var(--paper);
+  border-bottom:3px solid var(--ink);
+}
+.topnav .wrap{
+  display:flex;align-items:center;gap:8px;
+  padding:10px 16px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.topnav .wrap::-webkit-scrollbar{display:none}
+.brand{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:900;font-size:17px;white-space:nowrap;
+  margin-right:4px;
+}
+.brand span{color:#D97B6C}
+.navlink{
+  flex:0 0 auto;
+  text-decoration:none;font-weight:700;font-size:14px;
+  border:3px solid var(--ink);border-radius:999px;
+  padding:4px 14px;background:var(--white);
+}
+.navlink:hover{background:var(--yellow)}
+main{padding-top:66px}
+
+/* ---------- hero ---------- */
+.hero{
+  margin-top:18px;
+  border:3px solid var(--ink);
+  border-radius:28px;
+  background:var(--blue);
+  overflow:hidden;
+  box-shadow:6px 6px 0 var(--ink);
+}
+.hero-art{width:100%;height:auto}
+.hero-text{padding:18px 20px 22px;text-align:center;background:var(--paper)}
+.hero-text h1{font-size:30px;font-weight:900;line-height:1.3;margin:0}
+.hero-text .sub{margin:6px 0 0;font-weight:500}
+.hero-text .who{margin:2px 0 0;font-size:14px}
+.countdown{
+  display:flex;gap:10px;justify-content:center;
+  margin-top:16px;flex-wrap:wrap;
+}
+.cd-box{
+  background:var(--yellow);
+  border:3px solid var(--ink);border-radius:18px;
+  min-width:74px;padding:8px 6px 6px;
+}
+.cd-box b{
+  display:block;font-family:"Zen Maru Gothic",sans-serif;
+  font-size:28px;font-weight:900;line-height:1.1;
+}
+.cd-box span{font-size:12px;font-weight:700}
+.cd-label{width:100%;font-size:13px;font-weight:700;margin-top:2px}
+
+/* ---------- route strip ---------- */
+.route{
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+  margin:20px 0 4px;
+}
+.route .stop{
+  border:3px solid var(--ink);border-radius:999px;
+  padding:3px 12px;font-weight:700;font-size:14px;background:var(--white);
+}
+.route .stop.hot{background:var(--coral)}
+.route .arr{font-weight:900;color:var(--ink)}
+.route-note{font-size:13px;margin:4px 0 0}
+
+/* ---------- section headings ---------- */
+.sec-head{margin:38px 0 4px}
+.sec-head h2{font-size:24px;font-weight:900;margin:0;display:flex;align-items:center;gap:10px}
+.sec-head h2 .dot{width:22px;height:22px;border-radius:50%;border:3px solid var(--ink);flex:0 0 auto}
+.sec-head p{margin:4px 0 0;font-size:14px}
+.dot.coral{background:var(--coral)} .dot.yellow{background:var(--yellow)}
+.dot.blue{background:var(--blue)} .dot.green{background:var(--green)}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--white);
+  border:3px solid var(--ink);
+  border-radius:var(--radius);
+  padding:16px 18px;
+  margin-top:14px;
+  box-shadow:5px 5px 0 var(--ink);
+}
+.card h3{margin:0;font-size:18px;font-weight:900;line-height:1.4}
+.card .meta{font-size:13px;margin-top:2px}
+.card p{margin:8px 0 0;font-size:15px}
+.card ul{margin:8px 0 0;padding-left:20px;font-size:15px}
+.card li{margin:3px 0}
+.flight-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.flight-no{
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:19px;
+  background:var(--blue);border:3px solid var(--ink);border-radius:14px;
+  padding:2px 12px;white-space:nowrap;
+}
+.flight-date{font-weight:700;font-size:14px}
+.route-line{font-size:17px;font-weight:700;margin-top:8px}
+.times{font-size:15px;font-weight:700}
+.note-box{
+  margin-top:10px;font-size:14px;
+  background:var(--soft);border:2.5px dashed var(--ink);
+  border-radius:14px;padding:8px 12px;
+}
+.note-box.warn{background:var(--yellow)}
+.seat{font-weight:700}
+
+/* ---------- tags & badges ---------- */
+.tag{
+  display:inline-block;
+  border:2.5px solid var(--ink);border-radius:999px;
+  font-size:12px;font-weight:700;line-height:1.4;
+  padding:2px 10px;margin-right:4px;white-space:nowrap;
+  background:var(--white);
+}
+.tag.plane{background:var(--blue)}
+.tag.train{background:var(--yellow)}
+.tag.shinkansen{background:var(--coral)}
+.tag.metro{background:var(--green)}
+.tag.walk{background:var(--yellow)}
+.tag.bus{background:var(--green)}
+.badge{
+  display:inline-block;
+  border:2.5px solid var(--ink);border-radius:999px;
+  font-size:12px;font-weight:900;line-height:1.4;
+  padding:2px 10px;margin-left:6px;white-space:nowrap;
+  vertical-align:2px;
+}
+.badge.must{background:var(--coral)}
+.badge.pending{background:var(--yellow)}
+.badge.done{background:var(--green)}
+
+/* ---------- day switcher ---------- */
+.chips{
+  display:flex;gap:8px;overflow-x:auto;
+  padding:14px 2px 6px;
+  scrollbar-width:thin;
+  scroll-snap-type:x proximity;
+}
+.chip{
+  flex:0 0 auto;scroll-snap-align:start;
+  border:3px solid var(--ink);border-radius:16px;
+  background:var(--white);
+  padding:6px 10px;min-width:62px;text-align:center;
+  font-family:"Noto Sans TC",sans-serif;cursor:pointer;
+}
+.chip .d1{font-weight:900;font-size:15px;line-height:1.2}
+.chip .d2{font-size:12px;font-weight:700}
+.chip.active{background:var(--coral)}
+.chip .seg-dot{display:block;width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);margin:4px auto 0}
+.day-card{margin-top:12px}
+.day-head{display:flex;gap:14px;align-items:center}
+.day-head .pic{flex:0 0 auto;width:76px;height:76px}
+.day-head .pic svg{width:100%;height:100%}
+.day-head h3{font-size:20px}
+.day-head .city{font-size:14px;font-weight:700;margin-top:2px}
+.stay-line{
+  margin-top:12px;font-size:14px;
+  border-top:2.5px dashed var(--ink);padding-top:10px;
+}
+.timeline{list-style:none;margin:12px 0 0;padding:0}
+.timeline li{
+  display:flex;gap:10px;padding:9px 0;
+  border-top:2px solid var(--soft);
+}
+.timeline li:first-child{border-top:none}
+.tl-time{flex:0 0 52px;font-weight:900;font-size:14px;text-align:right;padding-top:2px}
+.tl-body{flex:1;min-width:0;font-size:15px;line-height:1.65}
+.tl-body .tags{margin-bottom:3px}
+
+/* ---------- stays ---------- */
+.stay-grid{display:grid;grid-template-columns:1fr;gap:0}
+.stay-card .city-tag{
+  display:inline-block;font-size:12px;font-weight:900;
+  border:2.5px solid var(--ink);border-radius:999px;
+  padding:1px 10px;margin-bottom:6px;
+}
+.stay-card .city-tag.c1{background:var(--coral)}
+.stay-card .city-tag.c2{background:var(--yellow)}
+.stay-card .city-tag.c3{background:var(--blue)}
+.stay-card .city-tag.c4{background:var(--green)}
+.stay-card.family{background:var(--green)}
+
+/* ---------- todo ---------- */
+.progress{
+  height:18px;border:3px solid var(--ink);border-radius:999px;
+  background:var(--white);overflow:hidden;margin-top:10px;
+}
+.progress > div{height:100%;background:var(--green);width:0%}
+.progress-text{font-size:14px;font-weight:700;margin-top:6px}
+.todo-group{margin-top:16px}
+.todo-group h3{font-size:17px;margin:0 0 4px}
+.todo-list{list-style:none;margin:0;padding:0}
+.todo-list li{margin:2px 0}
+.todo-list label{
+  display:flex;gap:10px;align-items:flex-start;
+  border:2.5px solid var(--ink);border-radius:16px;
+  background:var(--white);padding:10px 12px;cursor:pointer;
+  font-size:15px;line-height:1.55;
+}
+.todo-list input{
+  flex:0 0 auto;width:22px;height:22px;margin-top:2px;
+  accent-color:var(--green);cursor:pointer;
+}
+.todo-list li.done label{background:var(--soft)}
+.todo-list li.done label span{text-decoration:line-through;opacity:.65}
+
+/* ---------- footer ---------- */
+footer{
+  margin:40px 0 30px;text-align:center;font-size:13px;
+}
+footer .foot-card{
+  display:inline-block;border:3px solid var(--ink);border-radius:20px;
+  background:var(--yellow);padding:12px 18px;
+}
+
+/* ---------- animations ---------- */
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes bob-slow{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes pop{0%{transform:scale(.96);opacity:.35}60%{transform:scale(1.02)}100%{transform:scale(1);opacity:1}}
+.bob{animation:bob 4s ease-in-out infinite}
+.bob-slow{animation:bob-slow 5.5s ease-in-out infinite}
+.pop{animation:pop .45s ease}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+}
+@media (min-width:640px){
+  .stay-grid{grid-template-columns:1fr 1fr;gap:0 16px}
+  .hero-text h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== hand-drawn SVG symbols (flat fills, 3px ink outlines) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="s-plane" viewBox="0 0 120 80">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 48 Q8 38 22 38 L84 38 Q100 38 104 46 L108 52 L96 52 L92 62 L78 62 L74 52 L22 52 Q8 52 8 48 Z" fill="#FFFFFF"/>
+    <path d="M84 38 L96 18 L104 18 L98 38 Z" fill="#F2A497"/>
+    <path d="M40 52 L34 66 L46 66 L52 52 Z" fill="#A8D3E6"/>
+    <circle cx="30" cy="44" r="3.5" fill="#A8D3E6"/>
+    <circle cx="44" cy="44" r="3.5" fill="#A8D3E6"/>
+    <circle cx="58" cy="44" r="3.5" fill="#A8D3E6"/>
+    <circle cx="72" cy="44" r="3.5" fill="#A8D3E6"/>
+  </g>
+</symbol>
+<symbol id="s-train" viewBox="0 0 120 80">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14 62 L14 40 Q14 26 34 22 L78 18 Q102 18 106 34 L108 62 Z" fill="#F6D27A"/>
+    <path d="M78 18 L96 18 Q106 18 106 34 L106 40 L78 40 Z" fill="#A8D3E6"/>
+    <rect x="24" y="42" width="14" height="10" rx="3" fill="#FFFFFF"/>
+    <rect x="46" y="42" width="14" height="10" rx="3" fill="#FFFFFF"/>
+    <rect x="68" y="42" width="12" height="10" rx="3" fill="#FFFFFF"/>
+    <path d="M20 66 L100 66" fill="none"/>
+    <circle cx="32" cy="68" r="4" fill="#3E3A39" stroke="none"/>
+    <circle cx="88" cy="68" r="4" fill="#3E3A39" stroke="none"/>
+  </g>
+</symbol>
+<symbol id="s-budapest" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="14" y="58" width="92" height="22" rx="4" fill="#F6D27A"/>
+    <rect x="24" y="66" width="10" height="14" fill="#FFFFFF"/>
+    <rect x="44" y="66" width="10" height="14" fill="#FFFFFF"/>
+    <rect x="66" y="66" width="10" height="14" fill="#FFFFFF"/>
+    <rect x="86" y="66" width="10" height="14" fill="#FFFFFF"/>
+    <path d="M46 58 Q46 30 60 22 Q74 30 74 58 Z" fill="#B9DAA5"/>
+    <path d="M60 22 L60 10" fill="none"/>
+    <circle cx="60" cy="8" r="3" fill="#F2A497"/>
+    <path d="M14 58 L20 40 L26 58 Z" fill="#F2A497"/>
+    <path d="M94 58 L100 40 L106 58 Z" fill="#F2A497"/>
+  </g>
+</symbol>
+<symbol id="s-prague" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="18" y="34" width="20" height="46" rx="3" fill="#F2A497"/>
+    <path d="M18 34 L28 14 L38 34 Z" fill="#F6D27A"/>
+    <rect x="82" y="34" width="20" height="46" rx="3" fill="#F2A497"/>
+    <path d="M82 34 L92 14 L102 34 Z" fill="#F6D27A"/>
+    <path d="M8 80 L112 80 L112 66 Q92 52 60 52 Q28 52 8 66 Z" fill="#A8D3E6"/>
+    <path d="M48 52 Q60 40 72 52" fill="none"/>
+    <circle cx="28" cy="48" r="4" fill="#FFFFFF"/>
+    <circle cx="92" cy="48" r="4" fill="#FFFFFF"/>
+  </g>
+</symbol>
+<symbol id="s-vienna" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="16" y="52" width="88" height="28" rx="4" fill="#F6D27A"/>
+    <path d="M44 52 Q44 28 60 20 Q76 28 76 52 Z" fill="#B9DAA5"/>
+    <path d="M60 20 L60 10" fill="none"/>
+    <circle cx="60" cy="8" r="3" fill="#F2A497"/>
+    <rect x="26" y="60" width="9" height="12" fill="#FFFFFF"/>
+    <rect x="55" y="60" width="10" height="20" rx="4" fill="#FFFFFF"/>
+    <rect x="85" y="60" width="9" height="12" fill="#FFFFFF"/>
+    <path d="M16 52 L24 40 L32 52 Z" fill="#F2A497"/>
+    <path d="M88 52 L96 40 L104 52 Z" fill="#F2A497"/>
+  </g>
+</symbol>
+<symbol id="s-torii" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14 22 Q60 10 106 22 L102 30 Q60 20 18 30 Z" fill="#F2A497"/>
+    <rect x="22" y="38" width="76" height="8" rx="4" fill="#F2A497"/>
+    <rect x="32" y="30" width="10" height="50" rx="3" fill="#F2A497"/>
+    <rect x="78" y="30" width="10" height="50" rx="3" fill="#F2A497"/>
+    <rect x="52" y="46" width="16" height="10" rx="3" fill="#F6D27A"/>
+  </g>
+</symbol>
+<symbol id="s-tower" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M60 6 L78 82 L42 82 Z" fill="#F2A497"/>
+    <path d="M52 40 L68 40 M47 60 L73 60" fill="#FFFFFF"/>
+    <path d="M60 6 L60 82" fill="#FFFFFF"/>
+    <rect x="54" y="2" width="12" height="8" rx="3" fill="#F6D27A"/>
+  </g>
+</symbol>
+<symbol id="s-cup" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30 34 Q36 22 30 12 M48 34 Q54 22 48 12 M66 34 Q72 22 66 12" fill="none"/>
+    <path d="M26 36 L94 36 L88 74 Q86 82 76 82 L44 82 Q34 82 32 74 Z" fill="#FFFFFF"/>
+    <path d="M94 42 Q110 42 108 54 Q106 64 90 62" fill="none"/>
+    <rect x="26" y="36" width="68" height="10" fill="#A8D3E6"/>
+    <path d="M34 56 Q60 66 86 56" fill="none"/>
+    <ellipse cx="60" cy="86" rx="34" ry="3" fill="#F6D27A"/>
+  </g>
+</symbol>
+<symbol id="s-ginzan" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14 44 L60 18 L106 44 L100 44 L60 26 L20 44 Z" fill="#F2A497"/>
+    <rect x="24" y="44" width="72" height="34" rx="3" fill="#FFFFFF"/>
+    <rect x="32" y="52" width="14" height="14" rx="2" fill="#F6D27A"/>
+    <rect x="74" y="52" width="14" height="14" rx="2" fill="#A8D3E6"/>
+    <rect x="52" y="54" width="16" height="24" rx="3" fill="#B9DAA5"/>
+    <circle cx="24" cy="14" r="3" fill="#FFFFFF"/>
+    <circle cx="48" cy="8" r="3" fill="#FFFFFF"/>
+    <circle cx="84" cy="12" r="3" fill="#FFFFFF"/>
+    <circle cx="104" cy="8" r="3" fill="#FFFFFF"/>
+    <path d="M14 78 L106 78" fill="none"/>
+  </g>
+</symbol>
+<symbol id="s-taipei101" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M52 84 L56 26 L64 26 L68 84 Z" fill="#A8D3E6"/>
+    <path d="M54 56 L66 56 M55 42 L65 42 M56 28 L64 28" fill="#FFFFFF"/>
+    <rect x="48" y="18" width="24" height="9" rx="3" fill="#B9DAA5"/>
+    <rect x="54" y="8" width="12" height="10" rx="3" fill="#F6D27A"/>
+    <circle cx="60" cy="5" r="3" fill="#F2A497"/>
+  </g>
+</symbol>
+<symbol id="s-hk" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="12" y="40" width="18" height="40" rx="2" fill="#A8D3E6"/>
+    <rect x="36" y="26" width="20" height="54" rx="2" fill="#F6D27A"/>
+    <rect x="62" y="48" width="16" height="32" rx="2" fill="#F2A497"/>
+    <rect x="84" y="34" width="22" height="46" rx="2" fill="#B9DAA5"/>
+    <path d="M40 26 L46 14 L52 26 Z" fill="#F2A497"/>
+    <circle cx="100" cy="14" r="8" fill="#F6D27A"/>
+  </g>
+</symbol>
+<symbol id="s-home" viewBox="0 0 120 90">
+  <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M16 46 L60 16 L104 46 L96 46 L60 24 L24 46 Z" fill="#F2A497"/>
+    <rect x="28" y="46" width="64" height="34" rx="3" fill="#FFFFFF"/>
+    <rect x="52" y="56" width="16" height="24" rx="3" fill="#B9DAA5"/>
+    <rect x="34" y="54" width="12" height="12" rx="2" fill="#A8D3E6"/>
+    <rect x="74" y="54" width="12" height="12" rx="2" fill="#F6D27A"/>
+  </g>
+</symbol>
+</defs>
+</svg>
+
+<!-- ===== fixed top menu ===== -->
+<nav class="topnav" aria-label="主選單">
+  <div class="wrap">
+    <span class="brand">✈ 冬之旅<span> 2026</span></span>
+    <a class="navlink" href="#top">首頁</a>
+    <a class="navlink" href="#flights">航班</a>
+    <a class="navlink" href="#days">每日行程</a>
+    <a class="navlink" href="#stays">住宿</a>
+    <a class="navlink" href="#todo">待辦</a>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <!-- ===== hero ===== -->
+  <header class="hero">
+    <svg class="hero-art" viewBox="0 0 760 300" role="img" aria-label="飛機飛越布達佩斯國會大廈、鳥居、台北101與雪山的手繪插圖">
+      <rect x="0" y="0" width="760" height="300" fill="#A8D3E6"/>
+      <g class="bob" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round">
+        <circle cx="648" cy="56" r="32" fill="#F6D27A"/>
+        <path d="M648 10 L648 18 M648 86 L648 94 M602 56 L610 56 M686 56 L694 56 M616 24 L622 30 M674 82 L680 88 M680 24 L674 30 M624 82 L618 88" stroke-linecap="round" fill="none"/>
+      </g>
+      <g class="bob-slow" fill="#FFFFFF" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round">
+        <ellipse cx="120" cy="62" rx="42" ry="18"/>
+        <ellipse cx="150" cy="50" rx="30" ry="16"/>
+        <ellipse cx="560" cy="96" rx="36" ry="14"/>
+        <ellipse cx="586" cy="86" rx="24" ry="12"/>
+      </g>
+      <g class="bob" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M300 96 Q300 86 314 86 L400 86 Q416 86 420 94 L424 100 L412 100 L408 110 L394 110 L390 100 L314 100 Q300 100 300 96 Z" fill="#FFFFFF"/>
+        <path d="M400 86 L412 66 L420 66 L414 86 Z" fill="#F2A497"/>
+        <path d="M352 100 L346 114 L358 114 L364 100 Z" fill="#A8D3E6"/>
+        <circle cx="322" cy="92" r="3.5" fill="#A8D3E6"/>
+        <circle cx="336" cy="92" r="3.5" fill="#A8D3E6"/>
+        <circle cx="350" cy="92" r="3.5" fill="#A8D3E6"/>
+        <circle cx="364" cy="92" r="3.5" fill="#A8D3E6"/>
+      </g>
+      <path d="M0 300 L0 236 Q120 200 240 232 Q360 262 480 230 Q620 200 760 234 L760 300 Z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+      <g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <g>
+          <rect x="48" y="238" width="96" height="30" rx="4" fill="#F6D27A"/>
+          <path d="M84 238 Q84 214 96 206 Q108 214 108 238 Z" fill="#B9DAA5"/>
+          <circle cx="96" cy="204" r="3" fill="#F2A497"/>
+          <rect x="60" y="246" width="9" height="12" fill="#FFFFFF"/>
+          <rect x="78" y="246" width="9" height="12" fill="#FFFFFF"/>
+          <rect x="96" y="246" width="9" height="12" fill="#FFFFFF"/>
+          <rect x="114" y="246" width="9" height="12" fill="#FFFFFF"/>
+        </g>
+        <g>
+          <path d="M196 218 Q236 208 276 218 L272 226 Q236 218 200 226 Z" fill="#F2A497"/>
+          <rect x="204" y="232" width="64" height="7" rx="3.5" fill="#F2A497"/>
+          <rect x="214" y="226" width="9" height="42" rx="3" fill="#F2A497"/>
+          <rect x="248" y="226" width="9" height="42" rx="3" fill="#F2A497"/>
+        </g>
+        <g>
+          <path d="M330 268 L336 210 L348 210 L354 268 Z" fill="#A8D3E6"/>
+          <path d="M336 240 L348 240 M337 226 L347 226" fill="#FFFFFF"/>
+          <rect x="330" y="202" width="24" height="9" rx="3" fill="#B9DAA5"/>
+          <circle cx="342" cy="197" r="3" fill="#F2A497"/>
+        </g>
+        <g>
+          <path d="M420 268 L492 200 L564 268 Z" fill="#FFFFFF"/>
+          <path d="M472 220 L492 200 L512 220 L502 228 L492 218 L482 228 Z" fill="#A8D3E6"/>
+          <circle cx="600" cy="216" r="4" fill="#FFFFFF"/>
+          <circle cx="636" cy="206" r="4" fill="#FFFFFF"/>
+          <circle cx="668" cy="220" r="4" fill="#FFFFFF"/>
+        </g>
+        <g>
+          <path d="M600 252 L700 252 L700 268 L600 268 Z" fill="#FFFFFF"/>
+          <path d="M596 252 L650 228 L704 252 Z" fill="#F2A497"/>
+          <rect x="622" y="236" width="12" height="10" rx="2" fill="#F6D27A"/>
+          <rect x="656" y="236" width="12" height="10" rx="2" fill="#A8D3E6"/>
+        </g>
+      </g>
+    </svg>
+    <div class="hero-text">
+      <h1>東歐・東京・台北<br>冬之旅 2026</h1>
+      <p class="sub">布達佩斯 → 布拉格 → 維也納 → 東京 → 銀山溫泉 → 台北 → 香港</p>
+      <p class="who">Shufang Huang ＆ Chih Chung Wang（Gary）・2026 年 11 月 26 日－12 月 29 日・33 晚</p>
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="cd-box"><b id="cd-d">–</b><span>天</span></div>
+        <div class="cd-box"><b id="cd-h">–</b><span>小時</span></div>
+        <div class="cd-box"><b id="cd-m">–</b><span>分鐘</span></div>
+        <div class="cd-label" id="cd-label">距離出發還有</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== route strip ===== -->
+  <div class="route" aria-label="路線">
+    <span class="stop hot">SEA 西雅圖</span><span class="arr">→</span>
+    <span class="stop">AMS 阿姆斯特丹</span><span class="arr">→</span>
+    <span class="stop">BUD 布達佩斯</span><span class="arr">→</span>
+    <span class="stop">布拉格</span><span class="arr">→</span>
+    <span class="stop">維也納</span><span class="arr">→</span>
+    <span class="stop">東京</span><span class="arr">→</span>
+    <span class="stop">台北</span><span class="arr">→</span>
+    <span class="stop">香港</span><span class="arr">→</span>
+    <span class="stop hot">SEA 回家</span>
+  </div>
+  <p class="route-note">7 段航班・3 段火車・12 間住宿預訂・2 段家人住宿</p>
+
+  <!-- ===== flights ===== -->
+  <section id="flights">
+    <div class="sec-head">
+      <h2><span class="dot blue"></span>航班 <span style="font-size:15px">7 段</span></h2>
+      <p>時間都是當地時間。座位有寫出來的就是已選好的。</p>
+    </div>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 達美航空 DL 142</span>
+        <span class="flight-date">2026 年 11 月 26 日（四）</span>
+      </div>
+      <p class="route-line">西雅圖 SEA → 阿姆斯特丹 AMS</p>
+      <p class="times">出發 14:35（西岸時間）・隔天 09:25 抵達</p>
+      <p>特選經濟艙 Premium Select・空中巴士 A330-900neo<br><span class="seat">座位 20A / 20B</span></p>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 荷蘭航空 KL 1367</span>
+        <span class="flight-date">2026 年 11 月 27 日（五）</span>
+      </div>
+      <p class="route-line">阿姆斯特丹 AMS → 布達佩斯 BUD</p>
+      <p class="times">出發 11:35 ・抵達 13:40（第二航廈）</p>
+      <p>KLM Cityhopper<br><span class="seat">座位 16D / 16F</span></p>
+      <div class="note-box warn">⚠ 全程最緊的一段：阿姆斯特丹轉機只有 2 小時 10 分，又是第一次申根入境（EES 指紋＋拍照），下飛機直奔護照查驗，別先逛免稅店。</div>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 瑞安航空 FR 4091</span>
+        <span class="flight-date">2026 年 11 月 29 日（日）</span>
+      </div>
+      <p class="route-line">布達佩斯 BUD → 布拉格 PRG</p>
+      <p class="times">出發 12:20 ・抵達 13:35</p>
+      <p>Plus 票價・每人 20 公斤托運行李・Gary 有 Priority＋2 件手提行李<br><span class="seat">Shufang Huang 座位 14E・Chih Chung Wang 座位 14F</span></p>
+      <div class="note-box">登機證只在 App 裡：線上報到已完成，用 Ryanair App 的 QR code 登機，不收紙本。早上很趕——飯店表定 12:00 退房，班機 12:20 起飛，10:00–10:30 就要離開飯店。</div>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 全日空 NH 206</span>
+        <span class="flight-date">2026 年 12 月 4 日（五）</span>
+      </div>
+      <p class="route-line">維也納 VIE → 東京羽田 HND</p>
+      <p class="times">出發 10:35 ・隔天 06:55 抵達</p>
+      <p>波音 787-8・直飛・座位已選</p>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 長榮航空 BR 191</span>
+        <span class="flight-date">2026 年 12 月 9 日（三）</span>
+      </div>
+      <p class="route-line">東京羽田 HND → 台北松山 TSA</p>
+      <p class="times">出發 12:15 ・抵達 15:05</p>
+      <p>座位已選</p>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 華信航空 AE 983</span>
+        <span class="flight-date">2026 年 12 月 24 日（四）</span>
+      </div>
+      <p class="route-line">高雄 KHH → 香港 HKG</p>
+      <p class="times">出發 07:50 ・抵達 09:30（第一航廈）</p>
+      <p>座位已選</p>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no">✈ 國泰航空 CX 852</span>
+        <span class="flight-date">2026 年 12 月 29 日（二）</span>
+      </div>
+      <p class="route-line">香港 HKG → 西雅圖 SEA</p>
+      <p class="times">出發 13:00 ・當天 09:55 抵達</p>
+      <p><span class="seat">座位 15K / 16K</span></p>
+    </article>
+
+    <!-- ===== trains ===== -->
+    <div class="sec-head">
+      <h2><span class="dot yellow"></span>火車 <span style="font-size:15px">3 段・都已訂好</span></h2>
+      <p>三段都已訂位，票券細節看下面。</p>
+    </div>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no" style="background:var(--yellow)">🚆 ÖBB Railjet 55</span>
+        <span class="flight-date">2026 年 12 月 2 日（三）</span>
+      </div>
+      <p class="route-line">布拉格中央車站 → 維也納中央車站</p>
+      <p class="times">出發 08:37 ・抵達 12:49</p>
+      <div class="note-box warn">車票是 PDF（在 ÖBB 訂位信裡的連結，不是附件），出發前要印成 A4 紙本——PDF 票不能轉成手機票。座位等級和座位號碼都在那張 PDF 上。</div>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no" style="background:var(--coral)">🚄 JR 翼號 Tsubasa 133</span>
+        <span class="flight-date">2026 年 12 月 7 日（一）</span>
+      </div>
+      <p class="route-line">上野（東京）→ 大石田</p>
+      <p class="times">出發 10:06 ・抵達 13:16</p>
+      <p>2 位大人・綠色車廂指定席（座位號碼等票券發出才知道）</p>
+      <div class="note-box">這是預售車票：KKday 在 11 月 7 日（日本時間）發出正式票券，最終車次與時間以票券為準。</div>
+    </article>
+
+    <article class="card">
+      <div class="flight-top">
+        <span class="flight-no" style="background:var(--coral)">🚄 JR 翼號 Tsubasa 140</span>
+        <span class="flight-date">2026 年 12 月 8 日（二）</span>
+      </div>
+      <p class="route-line">大石田 → 東京</p>
+      <p class="times">出發 11:27 ・抵達 14:48</p>
+      <p>2 位大人・綠色車廂指定席（座位號碼等票券發出才知道）</p>
+      <div class="note-box">這是預售車票：KKday 在 11 月 8 日（日本時間）發出正式票券，最終車次與時間以票券為準。</div>
+    </article>
+  </section>
+
+  <!-- ===== daily itinerary ===== -->
+  <section id="days">
+    <div class="sec-head">
+      <h2><span class="dot coral"></span>每日行程 <span style="font-size:15px">34 天</span></h2>
+      <p>點上面的日期切換，行程就會跳出來。標 <span class="badge must">必去</span> 的是這趟的重點；標 <span class="badge pending">待確認</span> 的是還沒訂好的部分。</p>
+    </div>
+    <div class="chips" id="chips" role="tablist" aria-label="選擇日期"></div>
+    <div id="day-panel"></div>
+  </section>
+
+  <!-- ===== stays ===== -->
+  <section id="stays">
+    <div class="sec-head">
+      <h2><span class="dot green"></span>住宿</h2>
+      <p>12 間飯店預訂＋2 段家人住宿。房型有寫出來的就是已確認的。</p>
+    </div>
+    <div class="stay-grid">
+      <article class="card stay-card">
+        <span class="city-tag c1">布達佩斯</span>
+        <h3>Matild Palace</h3>
+        <p class="meta">Váci utca 36・11 月 27–29 日・2 晚</p>
+        <p>兩筆分開的一晚訂房，住同一間飯店。第一晚是 King 床市景房，第二晚是雙床房，中間可能要換房間。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c1">布拉格</span>
+        <h3>The Botanist by Adrez Living</h3>
+        <p class="meta">老城區 Rytířská 1083/16・11 月 29 日－12 月 2 日・3 晚</p>
+        <p>Deluxe King 房，住在老城區，聖誕市集走路就到。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c1">維也納</span>
+        <h3>Hotel Astoria Wien</h3>
+        <p class="meta">Kriehubergasse 1・12 月 2–4 日・2 晚</p>
+        <p>Classic King 房。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c2">東京</span>
+        <h3>OMO5 Tokyo Otsuka</h3>
+        <p class="meta">星野集團・12 月 5–7 日・2 晚</p>
+        <p>入住時間嚴格 15:00，不能提早入住，但行李可以先寄放在飯店。銀山溫泉那晚的大行李也可以免費寄放在這裡過夜（已和飯店確認過，退房時跟櫃台說一聲就好）。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c2">銀山溫泉</span>
+        <h3>Fujiya（藤屋）</h3>
+        <p class="meta">山形縣尾花澤市・12 月 7–8 日・1 晚</p>
+        <p>銀山溫泉的木造溫泉旅館。飯店接駁車：12/7 大石田站 13:30 來接，12/8 早上 10:30 從旅館出發回大石田。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c2">東京</span>
+        <h3>OMO5 Tokyo Otsuka</h3>
+        <p class="meta">星野集團・12 月 8–9 日・1 晚</p>
+        <p>銀山溫泉回來後的第二筆訂房。入住櫃台開到午夜 24:00，從表參道慢慢回來也來得及，大行李已經寄放在飯店了。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c3">台北</span>
+        <h3>台北晶華酒店 Regent Taipei</h3>
+        <p class="meta">12 月 9–11 日・2 晚・1 King Classic 房</p>
+        <p>兩晚是分開訂的，飯店已確認會當成連續住宿，盡量安排同一間房（當天房況為準）。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c3">台北</span>
+        <h3>台北喜來登大飯店 Sheraton Grand Taipei</h3>
+        <p class="meta">12 月 11–12 日・1 晚・Superior Room，1 張大床</p>
+        <p>點數兌換的住宿。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c3">台北</span>
+        <h3>Gloria Residence（華泰瑞舍）</h3>
+        <p class="meta">林森北路 359 號・12 月 12–19 日・7 晚</p>
+        <p>Royal B 房，雙人床，純住宿不含餐。飯店已確認房間保留。取消規定：入住 72 小時前免費取消，之後收一晚房費。</p>
+      </article>
+      <article class="card stay-card family">
+        <span class="city-tag c4">台灣</span>
+        <h3>爸媽家</h3>
+        <p class="meta">12 月 19–24 日・5 晚</p>
+        <p>住在台灣爸媽家，不用訂房。</p>
+      </article>
+      <article class="card stay-card family">
+        <span class="city-tag c4">香港</span>
+        <h3>香港家人家</h3>
+        <p class="meta">12 月 24–27 日・3 晚</p>
+        <p>住在香港家人家，不用訂房（Grand Hyatt 從 12 月 27 日開始）。</p>
+      </article>
+      <article class="card stay-card">
+        <span class="city-tag c4">香港</span>
+        <h3>香港君悅酒店 Grand Hyatt Hong Kong</h3>
+        <p class="meta">灣仔港灣道 1 號・12 月 27–29 日・2 晚</p>
+        <p>1 張大床房，住最後兩晚。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== todo ===== -->
+  <section id="todo">
+    <div class="sec-head">
+      <h2><span class="dot yellow"></span>出發前待辦</h2>
+      <p>打勾會存在這台裝置上，下次打開還在。</p>
+    </div>
+    <div class="progress" role="progressbar" aria-label="待辦進度" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="todo-progress"><div id="todo-bar"></div></div>
+    <p class="progress-text" id="todo-text">0 / 12 完成</p>
+
+    <div class="todo-group">
+      <h3>📄 證件與票券</h3>
+      <ul class="todo-list">
+        <li><label><input type="checkbox" data-todo="railjet"><span>列印 Railjet 車票（A4 紙本，PDF 在 ÖBB 訂位信裡的連結）</span></label></li>
+        <li><label><input type="checkbox" data-todo="tsubasa"><span>確認 Tsubasa 票券：11/7 發 Tsubasa 133、11/8 發 Tsubasa 140</span></label></li>
+        <li><label><input type="checkbox" data-todo="passport"><span>護照（兩人）＋影本</span></label></li>
+        <li><label><input type="checkbox" data-todo="ryanair"><span>Ryanair 登機證已在 App 裡（QR code，線上報到已完成）</span></label></li>
+        <li><label><input type="checkbox" data-todo="ees"><span>EES 入境準備：阿姆斯特丹首次入境要指紋＋拍照，轉機只有 2 小時 10 分</span></label></li>
+        <li><label><input type="checkbox" data-todo="copies"><span>離線備份所有訂位資料（手機截圖／照片）</span></label></li>
+      </ul>
+    </div>
+    <div class="todo-group">
+      <h3>🧳 行李</h3>
+      <ul class="todo-list">
+        <li><label><input type="checkbox" data-todo="coat"><span>歐洲冬裝：保暖大衣、發熱衣、防水好走的鞋（石板路）</span></label></li>
+        <li><label><input type="checkbox" data-todo="onsen"><span>銀山溫泉小包：大行李寄放在 OMO5，只帶一晚份的東西</span></label></li>
+        <li><label><input type="checkbox" data-todo="taipei"><span>台北輕裝：短袖＋薄外套、雨傘</span></label></li>
+        <li><label><input type="checkbox" data-todo="space"><span>留一點行李空間裝台北和香港買的東西</span></label></li>
+        <li><label><input type="checkbox" data-todo="home"><span>回程 CX 852：頸枕、保暖層、充電線放隨身行李</span></label></li>
+        <li><label><input type="checkbox" data-todo="adapter"><span>歐規轉接頭（Type C/F）＋充電線</span></label></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-card">🎄 東歐・東京・台北 2026 ・一路平安，玩得開心！</div>
+    <p style="margin-top:12px">時間都是當地時間；行程若有變動，以最新確認的為準。</p>
+  </footer>
+</main>
+
+<script>
+/* ============ daily itinerary data (Nov 26 – Dec 29, 2026 = 34 days) ============ */
+/* tag: plane | train | shinkansen | metro | walk | bus | note  (note = no pill) */
+const DAYS = [
+{date:"2026-11-26",dow:"週四",label:"11/26",city:"西雅圖 → 阿姆斯特丹",seg:"出發",pic:"s-plane",stay:"機上過夜",events:[
+ {t:"14:35",tag:"plane",text:"達美航空 DL 142，西雅圖 SEA 出發 — 特選經濟艙，座位 20A / 20B"},
+ {t:"",tag:"note",text:"夜間航班，機上過夜，明天早上到阿姆斯特丹。"}
+]},
+{date:"2026-11-27",dow:"週五",label:"11/27",city:"阿姆斯特丹 → 布達佩斯",seg:"中歐",pic:"s-budapest",stay:"Matild Palace，布達佩斯",events:[
+ {t:"09:25",tag:"plane",text:"抵達阿姆斯特丹 AMS — 首次申根入境，EES 指紋＋拍照",must:true},
+ {t:"11:35",tag:"plane",text:"荷蘭航空 KL 1367，AMS 11:35 → 布達佩斯 13:40（第二航廈），座位 16D / 16F"},
+ {t:"",tag:"note",text:"轉機只有 2 小時 10 分，下飛機直奔護照查驗，別先逛免稅店。"},
+ {t:"15:00",tag:"note",text:"入住 Matild Palace，布達佩斯。"},
+ {t:"晚上",tag:"note",text:"聖母升天大教堂聖誕市集（Basilica），先去這裡。",must:true}
+]},
+{date:"2026-11-28",dow:"週六",label:"11/28",city:"布達佩斯",seg:"中歐",pic:"s-budapest",stay:"Matild Palace，布達佩斯",events:[
+ {t:"13:00",tag:"note",text:"匈牙利國會大廈導覽，13:00–14:30",must:true},
+ {t:"",tag:"note",text:"今天換房：Matild Palace 第二個一晚訂房，可能要換房間。"},
+ {t:"晚上",tag:"note",text:"Vörösmarty 廣場聖誕市集",must:true}
+]},
+{date:"2026-11-29",dow:"週日",label:"11/29",city:"布達佩斯 → 布拉格",seg:"中歐",pic:"s-prague",stay:"The Botanist，布拉格（第 1 晚）",events:[
+ {t:"10:00",tag:"note",text:"最晚 10:00–10:30 離開飯店（班機 12:20，飯店表定 12:00 退房，時間很緊）。"},
+ {t:"12:20",tag:"plane",text:"瑞安航空 FR 4091，布達佩斯 12:20 → 布拉格 13:35，座位 14E / 14F，Plus 票價，每人 20 公斤托運行李"},
+ {t:"",tag:"note",text:"登機證只在 App 裡：線上報到已完成，用 Ryanair App 的 QR code 登機。"},
+ {t:"15:00",tag:"note",text:"入住 The Botanist，布拉格老城，Deluxe King 房。"},
+ {t:"晚上",tag:"note",text:"老城廣場 → 瓦茨拉夫廣場聖誕市集",must:true}
+]},
+{date:"2026-11-30",dow:"週一",label:"11/30",city:"布拉格",seg:"中歐",pic:"s-prague",stay:"The Botanist，布拉格（第 2 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日：老城區散步、咖啡館，慢慢逛。"},
+ {t:"晚上",tag:"note",text:"和平廣場（Náměstí Míru）→ 老城廣場聖誕市集",must:true}
+]},
+{date:"2026-12-01",dow:"週二",label:"12/1",city:"布拉格",seg:"中歐",pic:"s-prague",stay:"The Botanist，布拉格（第 3 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日：沒有預訂行程 — 查理大橋、老城、猶太區隨意走走。"}
+]},
+{date:"2026-12-02",dow:"週三",label:"12/2",city:"布拉格 → 維也納",seg:"中歐",pic:"s-vienna",stay:"Hotel Astoria Wien（第 1 晚）",events:[
+ {t:"08:37",tag:"train",text:"ÖBB Railjet 55，布拉格中央車站 08:37 → 維也納中央車站 12:49（已訂位，車票要印 A4 紙本）",must:true},
+ {t:"",tag:"note",text:"入住 Hotel Astoria Wien，Classic King 房。"},
+ {t:"晚上",tag:"note",text:"市政廳廣場聖誕市集（Rathausplatz）",must:true}
+]},
+{date:"2026-12-03",dow:"週四",label:"12/3",city:"維也納",seg:"中歐",pic:"s-vienna",stay:"Hotel Astoria Wien（第 2 晚）",events:[
+ {t:"11:30",tag:"note",text:"熊布朗宮 Schönbrunn，11:30–14:30（門票已訂）",must:true},
+ {t:"17:30",tag:"note",text:"上美景宮 Upper Belvedere，17:30–19:00（門票已訂）",must:true},
+ {t:"晚上",tag:"note",text:"美景宮前聖誕市集，當天順路加碼。"}
+]},
+{date:"2026-12-04",dow:"週五",label:"12/4",city:"維也納 → 東京",seg:"日本",pic:"s-plane",stay:"機上過夜",events:[
+ {t:"10:35",tag:"plane",text:"全日空 NH 206，維也納 10:35 直飛羽田，隔天 06:55 抵達（座位已選）"}
+]},
+{date:"2026-12-05",dow:"週六",label:"12/5",city:"東京",seg:"日本",pic:"s-cup",stay:"OMO5 Tokyo Otsuka（第 1 晚）",events:[
+ {t:"06:55",tag:"plane",text:"抵達東京羽田"},
+ {t:"09:00",tag:"note",text:"OMO5 Tokyo Otsuka 寄放行李（15:00 才能入住，行李可先寄放）。"},
+ {t:"09:15",tag:"metro",text:"山手線一站到池袋：珈琲伯爵（Hakushaku）北口，昭和風喫茶店吃早餐套餐",must:true},
+ {t:"10:30",tag:"walk",text:"鬼子母神堂散步，週六 10:30 起有現烤糰子。"},
+ {t:"11:30",tag:"metro",text:"池袋 → 自由之丘：山手線到澀谷，轉東急東橫線，約 30 分鐘。"},
+ {t:"12:00",tag:"walk",text:"自由之丘家具雜貨：IDÉE SHOP（自由之丘 2-16-29，11:00–19:00）＋ DULTON 旗艦店（綠丘 2-25-14，11:00–20:00），順路看看法式古董店 Brocante（13:00–18:00，週三休）",must:true},
+ {t:"午餐",tag:"note",text:"自由之丘車站附近當天找，不先訂位。IDÉE 四樓是畫廊和書店，店內沒有咖啡廳，DULTON 的咖啡廳也還沒確認，所以午餐不在店裡解決。"},
+ {t:"13:15",tag:"metro",text:"回大塚，約 13:50 到，15:00 入住補眠。"},
+ {t:"晚上",tag:"note",text:"去本駒込拜訪朋友（約 25 分鐘，山手線大塚 → 駒込＋走路；時間還沒約定）。"},
+ {t:"17:30",tag:"walk",text:"晚餐：喜三郎農場（親子丼／雞肉居酒屋），不用訂位直接去，約 17:30 到比較不用等。"}
+]},
+{date:"2026-12-06",dow:"週日",label:"12/6",city:"東京・銀座",seg:"日本",pic:"s-cup",stay:"OMO5 Tokyo Otsuka（第 2 晚）",events:[
+ {t:"11:00",tag:"note",text:"午餐：焼肉いのうえ 銀座店，2 位，New Lunch Course ¥5,000／人＋服務費 ¥1,000，用餐限 2 小時 — 還沒訂好，正在自己訂。",pending:true},
+ {t:"13:15",tag:"walk",text:"銀座ウエスト（Ginza West，銀座 7-3-6）先抽整理券，叫號再回來吃蛋糕套餐（喫茶室不接受預約，只能抽號碼牌）",must:true},
+ {t:"",tag:"note",text:"等號時逛銀座中央通步行者天國（週日 12:00–17:00）：UNIQLO、GU、DAISO、3COINS、Seria、MUJI、Loft。"},
+ {t:"",tag:"note",text:"備案：如果 16:30 還沒叫到號，改去カフェーパウリスタ（銀座 8-9-16）。"},
+ {t:"17:00",tag:"note",text:"晚上：丸之內仲通燈飾、KITTE、丸大樓。"},
+ {t:"晚餐",tag:"note",text:"輕鬆隨意，當天再決定，不先訂。"}
+]},
+{date:"2026-12-07",dow:"週一",label:"12/7",city:"東京 → 銀山溫泉",seg:"日本",pic:"s-ginzan",stay:"Fujiya，銀山溫泉",events:[
+ {t:"",tag:"note",text:"OMO5 退房：大行李免費寄放在飯店過夜（已確認，無件數限制），只帶銀山一晚小包。"},
+ {t:"10:06",tag:"shinkansen",text:"JR 翼號 Tsubasa 133，上野 10:06 → 大石田 13:16，綠色車廂指定席（票券 11/7 發出）",must:true},
+ {t:"13:30",tag:"bus",text:"Fujiya 接駁車：大石田站 13:30 來接，在車站候車室等，司機會點名",must:true},
+ {t:"晚上",tag:"note",text:"銀山溫泉：木造旅館街、雪夜散步",must:true}
+]},
+{date:"2026-12-08",dow:"週二",label:"12/8",city:"銀山溫泉 → 東京",seg:"日本",pic:"s-ginzan",stay:"OMO5 Tokyo Otsuka（第 3 晚）",events:[
+ {t:"10:30",tag:"bus",text:"Fujiya 接駁車 10:30 出發，約 11:00 到大石田"},
+ {t:"11:27",tag:"shinkansen",text:"JR 翼號 Tsubasa 140，大石田 11:27 → 東京 14:48，綠色車廂指定席（票券 11/8 發出）"},
+ {t:"14:48",tag:"note",text:"東京站：小包放車站置物櫃，直接去表參道，不先回大塚。"},
+ {t:"15:30",tag:"walk",text:"表參道：先去 18:00 關門的 KOFFEE MAMEYA 和一保堂青山店",must:true},
+ {t:"晚上",tag:"note",text:"表參道 Hills、Tokyu Plaza 逛到 20:00，表參道燈飾到 22:00，青山花市茶屋到 21:00。"},
+ {t:"",tag:"note",text:"回大塚 OMO5 入住（第二筆訂房，櫃台開到午夜 24:00，大行李已在飯店）。"}
+]},
+{date:"2026-12-09",dow:"週三",label:"12/9",city:"東京 → 台北",seg:"日本",pic:"s-taipei101",stay:"Regent Taipei，台北（第 1 晚）",events:[
+ {t:"09:45",tag:"note",text:"早上輕鬆收拾，約 09:45 離開大塚去羽田。"},
+ {t:"12:15",tag:"plane",text:"長榮航空 BR 191，羽田 12:15 → 台北松山 15:05（座位已選）"},
+ {t:"15:05",tag:"note",text:"入住台北晶華酒店 Regent Taipei（兩晚訂房已連成一住，優先同一間房）。"}
+]},
+{date:"2026-12-10",dow:"週四",label:"12/10",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Regent Taipei，台北（第 2 晚）",events:[
+ {t:"白天",tag:"note",text:"晶華酒店第二晚（FHR 訂房，同一間房優先）。"},
+ {t:"晚上",tag:"note",text:"可能：花娘小館平日晚餐（復興店優先），正在等空位釋出 — 未定。"}
+]},
+{date:"2026-12-11",dow:"週五",label:"12/11",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Sheraton Grand Taipei，台北",events:[
+ {t:"",tag:"note",text:"入住台北喜來登大飯店 Sheraton Grand Taipei，Superior Room，1 張大床。"},
+ {t:"晚上",tag:"note",text:"可能：花娘小館平日晚餐 — 未定。"}
+]},
+{date:"2026-12-12",dow:"週六",label:"12/12",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence，台北（第 1 晚）",events:[
+ {t:"",tag:"note",text:"入住 Gloria Residence（林森北路 359 號），Royal B 房，開始 7 晚長住。"}
+]},
+{date:"2026-12-13",dow:"週日",label:"12/13",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 2 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日：故宮北院「文物修復展」特展（想去的活動）。"}
+]},
+{date:"2026-12-14",dow:"週一",label:"12/14",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 3 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日：台北市區散步、咖啡館。"},
+ {t:"晚上",tag:"note",text:"可能：花娘小館平日晚餐（優先候選日）— 未定。"}
+]},
+{date:"2026-12-15",dow:"週二",label:"12/15",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 4 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日。"},
+ {t:"晚上",tag:"note",text:"可能：成蔵 Narikura 大安炸豬排（優先候選日）— 未定。"}
+]},
+{date:"2026-12-16",dow:"週三",label:"12/16",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 5 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日；晚上可能：成蔵 Narikura（備選日）— 未定。"}
+]},
+{date:"2026-12-17",dow:"週四",label:"12/17",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 6 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日；晚上可能：成蔵 Narikura（備選日）— 未定。"}
+]},
+{date:"2026-12-18",dow:"週五",label:"12/18",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 7 晚）",events:[
+ {t:"白天",tag:"note",text:"Gloria Residence 最後一晚，整理行李。"}
+]},
+{date:"2026-12-19",dow:"週六",label:"12/19",city:"台北 → 台灣爸媽家",seg:"家人",pic:"s-home",stay:"爸媽家，台灣",events:[
+ {t:"",tag:"note",text:"Gloria Residence 退房，之後住爸媽家 — 不用訂房。"}
+]},
+{date:"2026-12-20",dow:"週日",label:"12/20",city:"台灣・爸媽家",seg:"家人",pic:"s-home",stay:"爸媽家，台灣",events:[
+ {t:"白天",tag:"note",text:"和家人在一起，沒有預訂行程。"}
+]},
+{date:"2026-12-21",dow:"週一",label:"12/21",city:"台灣・爸媽家",seg:"家人",pic:"s-home",stay:"爸媽家，台灣",events:[
+ {t:"白天",tag:"note",text:"和家人在一起，沒有預訂行程。"}
+]},
+{date:"2026-12-22",dow:"週二",label:"12/22",city:"台灣・爸媽家",seg:"家人",pic:"s-home",stay:"爸媽家，台灣",events:[
+ {t:"白天",tag:"note",text:"和家人在一起，沒有預訂行程。"}
+]},
+{date:"2026-12-23",dow:"週三",label:"12/23",city:"台灣・爸媽家",seg:"家人",pic:"s-home",stay:"爸媽家，台灣",events:[
+ {t:"白天",tag:"note",text:"爸媽家最後一晚，明天一早飛高雄。"}
+]},
+{date:"2026-12-24",dow:"週四",label:"12/24",city:"高雄 → 香港",seg:"香港",pic:"s-hk",stay:"香港家人家",events:[
+ {t:"07:50",tag:"plane",text:"華信航空 AE 983，高雄 07:50 → 香港 09:30（第一航廈，座位已選）"},
+ {t:"",tag:"note",text:"之後住香港家人家 — 不用訂房（Grand Hyatt 從 12/27 開始）。"}
+]},
+{date:"2026-12-25",dow:"週五",label:"12/25",city:"香港・家人家",seg:"香港",pic:"s-hk",stay:"香港家人家",events:[
+ {t:"白天",tag:"note",text:"聖誕節，和家人在一起。"}
+]},
+{date:"2026-12-26",dow:"週六",label:"12/26",city:"香港・家人家",seg:"香港",pic:"s-hk",stay:"香港家人家",events:[
+ {t:"白天",tag:"note",text:"和家人在一起，沒有預訂行程。"}
+]},
+{date:"2026-12-27",dow:"週日",label:"12/27",city:"香港",seg:"香港",pic:"s-hk",stay:"Grand Hyatt Hong Kong（第 1 晚）",events:[
+ {t:"",tag:"note",text:"入住香港君悅酒店 Grand Hyatt Hong Kong（灣仔港灣道 1 號），1 張大床房。"},
+ {t:"",tag:"note",text:"從家人家搬到飯店，住最後兩晚。"}
+]},
+{date:"2026-12-28",dow:"週一",label:"12/28",city:"香港",seg:"香港",pic:"s-hk",stay:"Grand Hyatt Hong Kong（第 2 晚）",events:[
+ {t:"白天",tag:"note",text:"自由日：沒有預訂行程。"}
+]},
+{date:"2026-12-29",dow:"週二",label:"12/29",city:"香港 → 西雅圖",seg:"回家",pic:"s-plane",stay:"回家囉！",events:[
+ {t:"",tag:"note",text:"Grand Hyatt 退房。"},
+ {t:"13:00",tag:"plane",text:"國泰航空 CX 852，香港 13:00 → 西雅圖當天 09:55，座位 15K / 16K"}
+]}
+];
+
+/* ============ render: date chips + day timeline ============ */
+const TAG_LABEL = {plane:"✈ 飛機",train:"🚆 火車",shinkansen:"🚄 新幹線",metro:"🚇 電車",walk:"🚶 步行",bus:"🚌 巴士"};
+const SEG_COLOR = {"出發":"#A8D3E6","中歐":"#F6D27A","日本":"#F2A497","台北":"#A8D3E6","香港":"#B9DAA5","家人":"#B9DAA5","回家":"#F2A497"};
+let currentDay = 0;
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+function renderChips(){
+  const box = document.getElementById("chips");
+  box.innerHTML = DAYS.map((d,i)=>
+    '<button type="button" role="tab" class="chip'+(i===currentDay?" active":"")+'" data-i="'+i+'" aria-selected="'+(i===currentDay)+'">'+
+      '<span class="d1">'+esc(d.label)+'</span><br><span class="d2">'+esc(d.dow)+'</span>'+
+      '<span class="seg-dot" style="background:'+(SEG_COLOR[d.seg]||"#F6D27A")+'"></span>'+
+    '</button>'
+  ).join("");
+  box.querySelectorAll(".chip").forEach(ch=>{
+    ch.addEventListener("click",()=>selectDay(parseInt(ch.dataset.i,10),true));
+  });
+}
+
+function renderDay(){
+  const d = DAYS[currentDay];
+  const panel = document.getElementById("day-panel");
+  const rows = d.events.map(ev=>{
+    const tag = ev.tag!=="note" ? '<span class="tag '+ev.tag+'">'+TAG_LABEL[ev.tag]+'</span>' : "";
+    const must = ev.must ? '<span class="badge must">必去</span>' : "";
+    const pend = ev.pending ? '<span class="badge pending">待確認</span>' : "";
+    return '<li><span class="tl-time">'+esc(ev.t||"")+'</span><span class="tl-body">'+
+      (tag?'<span class="tags">'+tag+'</span>':"")+
+      esc(ev.text)+must+pend+
+    '</span></li>';
+  }).join("");
+  panel.innerHTML =
+    '<article class="card day-card pop" id="day-card">'+
+      '<div class="day-head">'+
+        '<span class="pic bob-slow" aria-hidden="true"><svg><use href="#'+d.pic+'"/></svg></span>'+
+        '<div><h3>'+esc(d.label)+'（'+esc(d.dow)+'）</h3>'+
+        '<div class="city">'+esc(d.city)+'・'+esc(d.seg)+'</div></div>'+
+      '</div>'+
+      '<ul class="timeline">'+rows+'</ul>'+
+      '<p class="stay-line">🛏 住宿：'+esc(d.stay)+'</p>'+
+    '</article>';
+  const card = document.getElementById("day-card");
+  card.classList.remove("pop"); void card.offsetWidth; card.classList.add("pop");
+}
+
+function selectDay(i,scroll){
+  currentDay = i;
+  renderChips();
+  renderDay();
+  if(scroll){
+    const chip = document.querySelector('.chip[data-i="'+i+'"]');
+    if(chip) chip.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+  }
+}
+
+/* ============ countdown to departure: Nov 26, 2026 14:35 PST ============ */
+const DEPART = new Date("2026-11-26T14:35:00-08:00");
+function tickCountdown(){
+  const now = new Date();
+  const diff = DEPART - now;
+  const label = document.getElementById("cd-label");
+  if(diff <= 0){
+    document.getElementById("cd-d").textContent = "0";
+    document.getElementById("cd-h").textContent = "0";
+    document.getElementById("cd-m").textContent = "0";
+    label.textContent = "✈ 已經出發囉！旅途愉快！";
+    return;
+  }
+  const mins = Math.floor(diff/60000);
+  document.getElementById("cd-d").textContent = Math.floor(mins/1440);
+  document.getElementById("cd-h").textContent = Math.floor((mins%1440)/60);
+  document.getElementById("cd-m").textContent = mins%60;
+  label.textContent = "距離出發還有";
+}
+
+/* ============ todo checklist (localStorage) ============ */
+const TODO_KEY = "travel2026-todo-v1";
+function loadTodo(){
+  try{ return JSON.parse(localStorage.getItem(TODO_KEY)||"[]"); }catch(e){ return []; }
+}
+function saveTodo(ids){
+  try{ localStorage.setItem(TODO_KEY, JSON.stringify(ids)); }catch(e){}
+}
+function refreshTodo(){
+  const boxes = Array.from(document.querySelectorAll("[data-todo]"));
+  const done = boxes.filter(b=>b.checked);
+  const total = boxes.length;
+  document.getElementById("todo-bar").style.width = total ? (done.length/total*100)+"%" : "0%";
+  document.getElementById("todo-text").textContent = done.length+" / "+total+" 完成";
+  document.getElementById("todo-progress").setAttribute("aria-valuenow", String(done.length));
+  document.getElementById("todo-progress").setAttribute("aria-valuemax", String(total));
+  boxes.forEach(b=>{
+    const li = b.closest("li");
+    if(li) li.classList.toggle("done", b.checked);
+  });
+}
+function initTodo(){
+  const saved = new Set(loadTodo());
+  const boxes = Array.from(document.querySelectorAll("[data-todo]"));
+  boxes.forEach(b=>{
+    b.checked = saved.has(b.dataset.todo);
+    b.addEventListener("change",()=>{
+      const ids = boxes.filter(x=>x.checked).map(x=>x.dataset.todo);
+      saveTodo(ids);
+      refreshTodo();
+    });
+  });
+  refreshTodo();
+}
+
+/* ============ init ============ */
+renderChips();
+renderDay();
+tickCountdown();
+setInterval(tickCountdown, 60000);
+initTodo();
+</script>
+</body>
+</html>
