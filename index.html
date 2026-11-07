@@ -831,7 +831,7 @@ const DAYS = [
 ]},
 {date:"2026-12-04",dow:"週五",label:"12/4",city:"維也納 → 東京",seg:"日本",pic:"s-plane",stay:"機上過夜",events:[
  {t:"10:35",tag:"plane",text:"全日空 NH 206，維也納 10:35 直飛羽田，隔天 06:55 抵達"},
- {t:"",tag:"note",text:"這班機同時是入境申根區時的離境證明，文件都齊。建議 06:45–07:00 從 Hotel Astoria（入口 Führichgasse 1）搭計程車直達維也納機場，車資約 €30–45，目標約 07:30–08:00 抵達，為 10:35 NH 206 預留報到、安檢與出境時間；不搭 €11 的 Railjet。若搭大眾運輸，可從 Karlsplatz 搭 U1 到 Wien Hauptbahnhof，再轉 ÖBB Railjet／IC 至機場（火車段約 15 分鐘，出發前核對當日班次）。2026 年 CAT 改為接駁巴士，S7 路線亦受施工影響，勿依舊版 Wien Mitte 直達機場火車資訊規劃。"},
+ {t:"",tag:"note",text:"這班機同時是入境申根區時的離境證明，文件都齊。建議 08:00 從 Hotel Astoria（入口 Führichgasse 1）搭計程車直達維也納機場，車資約 €30–45，約 08:30–08:45 抵達，約為 10:35 NH 206 起飛前 2 小時，預留報到、安檢與出境時間；不搭 €11 的 Railjet。若搭大眾運輸，可從 Karlsplatz 搭 U1 到 Wien Hauptbahnhof，再轉 ÖBB Railjet／IC 至機場（火車段約 15 分鐘，出發前核對當日班次）。2026 年 CAT 改為接駁巴士，S7 路線亦受施工影響，勿依舊版 Wien Mitte 直達機場火車資訊規劃。"},
  {t:"",tag:"note",text:"東歐段在這裡收尾：布達佩斯 2 晚、布拉格 3 晚、維也納 2 晚；落地羽田後約 08:30 到 OMO5 先寄放行李，接東京計畫。"}
 ]},
 {date:"2026-12-05",dow:"週六",label:"12/5",city:"東京",seg:"日本",pic:"s-cup",stay:"OMO5 Tokyo Otsuka（第 1 晚）",events:[
@@ -866,7 +866,7 @@ const DAYS = [
  {t:"10:06",tag:"shinkansen",text:"JR 翼號 Tsubasa 133，上野 10:06 → 大石田 13:16，綠色車廂指定席（票券 11/7 發出，座位號碼以出票為準）；山形新幹線約 3 小時 10 分。",must:true},
  {t:"13:16",tag:"train",text:"抵達大石田站，下車後直接去車站候車室等接駁，不要離開站內（接駁只差 14 分鐘）。"},
  {t:"13:30",tag:"bus",text:"Fujiya 接駁車：大石田站 13:30 來接，在車站候車室等，司機拿著名單按名字叫人。",must:true},
- {t:"⚠ 延誤",tag:"note",text:"【12/7 誤點應變】Tsubasa 133 預計 13:16 抵達，與已確認的 13:30 接駁僅差 14 分鐘。若列車誤點，立即聯絡藤屋 0237-28-2141（海外 +81-237-28-2141），告知姓名、車次、預計抵達時間及可能延遲入住／晚餐。不要假設司機會等待。"},
+ {t:"⚠ 延誤",tag:"note",text:"【12/7 誤點應變】Tsubasa 133 預計 13:16 抵達，與已確認的 13:30 接駁僅差 14 分鐘。若列車誤點，立即聯絡藤屋，告知姓名、車次、預計抵達時間及可能延遲入住／晚餐。不要假設司機會等待。"},
  {t:"13:30",tag:"note",text:"【藤屋 10/15 電郵確認】12/7 13:30 大石田站接人；在車站內候車室（待合室）等候，司機持姓名名單叫人。保留確認信截圖；原接駁預約不變。"},
  {t:"14:10",tag:"bus",text:"【備案 A】はながさ路線巴士：大石田站 14:10 → 銀山溫泉約 14:53；不需預約，成人 ¥1,000 單程、只收現金。抵達銀山溫泉巴士站（不是藤屋門口），上車前向藤屋確認從巴士站到旅館的接送／步行方式；冬季可能停駛。"},
  {t:"15:30",tag:"bus",text:"【備案 B】藤屋大石田站 15:30 第二班預約接駁：必須先電話聯絡藤屋、獲確認後才可搭乘；不能憑原 13:30 預約直接改搭。"},
@@ -890,14 +890,13 @@ const DAYS = [
  {t:"12:15",tag:"plane",text:"長榮航空 BR 191，羽田 12:15 → 台北松山 15:05"},
  {t:"15:05",tag:"note",text:"入住台北晶華酒店 Regent Taipei（兩晚訂房已連成一住，優先同一間房）。"},
  {t:"",tag:"taxi",text:"松山機場 → 晶華酒店：計程車 NT$190–230（約 US$6–7）或 Uber，自由選擇，不用事先安排。"},
+ {t:"19:30",tag:"note",text:"晚餐：花娘小館已訂位 19:30，復興店。",must:true}
 ]},
 {date:"2026-12-10",dow:"週四",label:"12/10",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Regent Taipei，台北（第 2 晚）",events:[
- {t:"白天",tag:"note",text:"晶華酒店第二晚（FHR 訂房，同一間房優先）。"},
- {t:"晚上",tag:"note",text:"可能：花娘小館平日晚餐（復興店優先），正在等空位釋出 — 未定。"}
+ {t:"白天",tag:"note",text:"晶華酒店第二晚（FHR 訂房，同一間房優先）。"}
 ]},
 {date:"2026-12-11",dow:"週五",label:"12/11",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Sheraton Grand Taipei，台北",events:[
- {t:"",tag:"note",text:"入住台北喜來登大飯店 Sheraton Grand Taipei，Superior Room，1 張大床。"},
- {t:"晚上",tag:"note",text:"可能：花娘小館平日晚餐 — 未定。"}
+ {t:"",tag:"note",text:"入住台北喜來登大飯店 Sheraton Grand Taipei，Superior Room，1 張大床。"}
 ]},
 {date:"2026-12-12",dow:"週六",label:"12/12",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence，台北（第 1 晚）",events:[
  {t:"",tag:"note",text:"入住 Gloria Residence（林森北路 359 號），Royal B 房，開始 6 晚長住。"}
@@ -906,8 +905,7 @@ const DAYS = [
  {t:"白天",tag:"note",text:"自由日：故宮北院「文物修復展」特展（想去的活動）。"}
 ]},
 {date:"2026-12-14",dow:"週一",label:"12/14",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 3 晚）",events:[
- {t:"白天",tag:"note",text:"自由日：台北市區散步、咖啡館。"},
- {t:"晚上",tag:"note",text:"可能：花娘小館平日晚餐（優先候選日）— 未定。"}
+ {t:"白天",tag:"note",text:"自由日：台北市區散步、咖啡館。"}
 ]},
 {date:"2026-12-15",dow:"週二",label:"12/15",city:"台北",seg:"台北",pic:"s-taipei101",stay:"Gloria Residence（第 4 晚）",events:[
  {t:"白天",tag:"note",text:"自由日。"},
